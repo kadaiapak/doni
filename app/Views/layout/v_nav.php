@@ -14,7 +14,7 @@
           <img src="<?= base_url(); ?>/template/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= base_url('admin'); ?>" class="d-block">Alexander Pierce</a>
+          <a href="<?= base_url('admin'); ?>" class="d-block"><?= session()->get('nama_user'); ?></a>
         </div>
       </div>
 
@@ -105,6 +105,14 @@
               <p>
                 Calendar
                 <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="<?= base_url(); ?>/logout" class="nav-link btn btn-warning">
+              <i class="nav-icon fas fa-sign-out"></i>
+              <p>
+                Logout
               </p>
             </a>
           </li>

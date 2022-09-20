@@ -6,7 +6,7 @@ class BlogModel extends Model
 {
     protected $table = 'blog';
     protected $useTimestamps = 'true';
-    protected $allowedFields = ['judul','isi'];
+    protected $allowedFields = ['sampul','judul','isi', 'is_active'];
 
     public function getBlog($id = false)
     {
@@ -19,6 +19,7 @@ class BlogModel extends Model
 
         // return $this->db->table('blog')->get()->getResultArray();
     }
+
 }
 
 ?>

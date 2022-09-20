@@ -67,8 +67,50 @@
           ['table', ['table']],
           ['insert', ['link', 'picture', 'video']],
           ['view', ['fullscreen', 'codeview', 'help']]
-        ]
+        ],
+        callbacks: {
+                    onImageUpload: function(files) {
+                        for (let i = 0; i < files.length; i++) {
+                            $.upload(files[i]);
+                        }
+                    },
+                    onMediaDelete: function(target) {
+                        $.delete(target[0].src);
+                    }
+                },
       });
+      $.upload = function(file) {
+                let out = new FormData();
+                out.append('file', file, file.name);
+                $.ajax({
+                    method: 'POST',
+                    url: '<?php echo site_url('admin/blog/uploadGambar') ?>',
+                    contentType: false,
+                    cache: false,
+                    processData: false,
+                    data: out,
+                    success: function(img) {
+                        $('.summernote').summernote('insertImage', img);
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error(textStatus + " " + errorThrown);
+                    }
+                });
+            };
+            $.delete = function(src) {
+                $.ajax({
+                    method: 'POST',
+                    url: '<?php echo site_url('admin/blog/deleteGambar') ?>',
+                    cache: false,
+                    data: {
+                        src: src
+                    },
+                    success: function(response) {
+                        console.log(response);
+                    }
+
+                });
+            };
 </script>
 <script>
   $(function () {
@@ -87,5 +129,22 @@
     });
   });
 </script>
+<script>
+      function previewImage() {
+        const sampul = document.querySelector('#sampul');
+        // const sampulLabel = document.querySelector('.custom-file-label');
+        const imgPreview = document.querySelector('.img-preview');
+
+        // sampulLabel.textContent = sampul.files[0].name;
+
+        const fileSampul = new FileReader();
+        fileSampul.readAsDataURL(sampul.files[0]);
+
+        fileSampul.onload = function(e) {
+          imgPreview.src = e.target.result;
+        }
+      }
+      
+    </script>
 </body>
 </html>

@@ -18,7 +18,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Admin</a></li>
-              <li class="breadcrumb-item active">Blog Post</li>
+              <li class="breadcrumb-item active">Post Detail</li>
             </ol>
           </div>
         </div>
@@ -31,7 +31,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">List Blog</h3>
+          <h3 class="card-title">Post Detail</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -43,6 +43,8 @@
           </div>
         </div>
         <div class="card-body">
-          
+          <img src="/img/<?= $blog['sampul']; ?>" alt="">
+          <h1><?= $blog['judul']; ?></h1>
+          <p><?= $blog['isi']; ?></p>
         </div>
         <!-- /.card-body -->
