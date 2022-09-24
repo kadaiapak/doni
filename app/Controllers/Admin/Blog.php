@@ -48,10 +48,15 @@ class Blog extends BaseController
     {
         if(!$this->validate([
             'judul' =>[
-                'rules' => 'required|is_unique[blog.judul]',
+                'rules' => 'required',
                 'errors' => [
                     'required' => '{field} blog harus diisi',
-                    'is_unique' => '{field} sudah ada'
+                ]
+            ],
+            'deskripsi' =>[
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} blog harus diisi',
                 ]
             ],
             'sampul' =>[
@@ -84,6 +89,7 @@ class Blog extends BaseController
         $this->BlogModel->save([
             'sampul' => $namaSampul,
             'judul' => $this->request->getVar('judul'),
+            'deskripsi' => $this->request->getVar('deskripsi'),
             'isi' => $this->request->getVar('isi'),  
             'is_active' => 1      
         ]);

@@ -54,6 +54,15 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                              <label for="deskripsi" class="col-sm-2 col-form-label">deskripsi</label>
+                              <div class="col-sm-10">
+                                  <textarea type="deskripsi" placeholder="deskripsi" class="form-control <?= ($validation->hasError('deskripsi')) ? 'is-invalid' :''; ?>" id="deskripsi" name="deskripsi"><?= old('deskripsi'); ?></textarea>
+                                  <div class="invalid-feedback">
+                                      <?= $validation->getError('deskripsi'); ?>
+                                  </div> 
+                              </div>
+                            </div>
+                            <div class="form-group row">
                               <label for="isi" class="col-sm-2 col-form-label">Isi</label>
                               <div class="col-sm-10">
                                   <textarea type="isi" class="form-control summernote <?= ($validation->hasError('isi')) ? 'is-invalid' :''; ?>" id="isi" name="isi"><?= old('isi'); ?></textarea>
