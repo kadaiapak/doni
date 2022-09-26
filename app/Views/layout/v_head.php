@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="<?= base_url(); ?>/template/dist/css/adminlte.min.css">
 
   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+  <!-- <link rel="icon" href="< ?=base_url()?>/favicon.ico" type="image/gif"> -->
   <style>
     .note-editor .dropdown-toggle::after{
       all: unset;

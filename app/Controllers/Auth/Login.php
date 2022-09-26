@@ -58,6 +58,7 @@ class Login extends BaseController
             }else {
                 session()->set('user_id', $dataUser['id']);
                 session()->set('email', $dataUser['email']);
+                session()->set('avatar', $dataUser['avatar']);
                 session()->set('nama_user', $dataUser['nama_user']); 
                 session()->set('level', $dataUser['level']); 
                 return redirect()->to(base_url('admin/dashboard'));

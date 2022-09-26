@@ -1,5 +1,5 @@
 <?php
-
+        
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 use App\Models\BlogModel;
@@ -19,7 +19,6 @@ class Blog extends BaseController
             'blog_list' =>$this->BlogModel->getBlog(),
             'isi' =>  'blog/v_blog'
         ];
-
         echo view('layout/v_wrapper', $data);
     }
 
@@ -30,6 +29,7 @@ class Blog extends BaseController
             'blog'  =>  $this->BlogModel->getBlog($id),
             'isi'   =>  'blog/v_blog_detail'
         ];
+
         echo view('layout/v_wrapper', $data);
     }
 
@@ -91,7 +91,8 @@ class Blog extends BaseController
             'judul' => $this->request->getVar('judul'),
             'deskripsi' => $this->request->getVar('deskripsi'),
             'isi' => $this->request->getVar('isi'),  
-            'is_active' => 1      
+            'is_active' => 1,
+            'user_id' => session()->get('user_id')
         ]);
 
         session()->setFlashdata('success', 'Data berhasil ditambahkan');

@@ -6,7 +6,7 @@ class AuthModel extends Model
 {
     protected $table = 'user';
     protected $useTimestamps = 'true';
-    protected $allowedFields = ['sampul','judul','isi', 'is_active'];
+    protected $allowedFields = ['nama_user','avatar','email','level', 'is_active'];
 
     public function cek_login($email, $password)
     {

@@ -1,0 +1,107 @@
+CRITICAL - 2022-09-25 22:59:42 --> Cannot use object of type stdClass as array
+in APPPATH\Views\frontend\v_home_fe.php on line 169.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('frontend/v_home_fe', [], true)
+ 4 APPPATH\Controllers\Frontend\Fblog.php(22): view('frontend/v_home_fe', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 22:59:51 --> Undefined array key "id"
+in APPPATH\Views\frontend\v_home_fe.php on line 169.
+ 1 APPPATH\Views\frontend\v_home_fe.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Views\\frontend\\v_home_fe.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\v_home_fe.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('frontend/v_home_fe', [], true)
+ 5 APPPATH\Controllers\Frontend\Fblog.php(22): view('frontend/v_home_fe', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:00:14 --> Attempt to read property "id" on array
+in APPPATH\Views\frontend\v_home_fe.php on line 169.
+ 1 APPPATH\Views\frontend\v_home_fe.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "id" on array', 'APPPATH\\Views\\frontend\\v_home_fe.php', 169)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\v_home_fe.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('frontend/v_home_fe', [], true)
+ 5 APPPATH\Controllers\Frontend\Fblog.php(22): view('frontend/v_home_fe', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:03:23 --> Invalid file: v_blog_detail_fe.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_blog_detail_fe.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_blog_detail_fe', [], true)
+ 3 APPPATH\Controllers\Frontend\Fblog.php(32): view('v_blog_detail_fe', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('27')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:04:33 --> Invalid file: v_blog_detail_fe.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_blog_detail_fe.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_blog_detail_fe', [], true)
+ 3 APPPATH\Controllers\Frontend\Fblog.php(32): view('v_blog_detail_fe', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('28')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:04:54 --> syntax error, unexpected token ";", expecting ")"
+in APPPATH\Controllers\Frontend\Fblog.php on line 32.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Frontend\\Fblog.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Frontend\\FBlog')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Frontend\\FBlog')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Frontend\\FBlog', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:23:27 --> Invalid file: v_blog_detail_fe.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_blog_detail_fe.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_blog_detail_fe', [], true)
+ 3 APPPATH\Controllers\Frontend\Fblog.php(33): view('v_blog_detail_fe', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('28')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:23:34 --> Invalid file: v_blog_detail_fe.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_blog_detail_fe.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_blog_detail_fe', [], true)
+ 3 APPPATH\Controllers\Frontend\Fblog.php(33): view('v_blog_detail_fe', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('28')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:26:02 --> Invalid file: v_blog_detail_fe.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_blog_detail_fe.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_blog_detail_fe', [], true)
+ 3 APPPATH\Controllers\Frontend\Fblog.php(31): view('v_blog_detail_fe', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('28')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-25 23:26:14 --> Undefined variable $blog_list
+in APPPATH\Views\frontend\v_blog_detail_fe.php on line 167.
+ 1 APPPATH\Views\frontend\v_blog_detail_fe.php(167): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $blog_list', 'APPPATH\\Views\\frontend\\v_blog_detail_fe.php', 167)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\frontend\\v_blog_detail_fe.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('frontend/v_blog_detail_fe', [], true)
+ 5 APPPATH\Controllers\Frontend\Fblog.php(31): view('frontend/v_blog_detail_fe', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->detail('28')
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

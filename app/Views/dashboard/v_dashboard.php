@@ -1,6 +1,3 @@
-
-
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -31,11 +28,12 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Info</h3>
-
-         
+          <h3 class="card-title">Dashboard Info</h3>
         </div>
         <div class="card-body">
             <h1></h1>
-        </div>
-        <!-- /.card-body -->
+        </div><!-- /.card-body -->
+      </div> <!-- /.card -->
+
+    </section> <!-- /.content -->
+  </div>
