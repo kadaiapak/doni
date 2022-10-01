@@ -1,29 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--=============== FAVICON ===============-->
-    <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
-    <!--=============== BOXICONS ===============-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="<?= base_url(); ?>/template_frontend/assets/css/swiper-bundle.min.css" />
-
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="<?= base_url(); ?>/template_frontend/assets/css/styles.css" />
-    <link rel="icon" href="<?=base_url()?>/favicon.ico" type="image/gif">
-
-    <title><?= $title; ?></title>
-  </head>
-  <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
@@ -135,7 +109,6 @@
           </div>
         </div>
       </section>
-
       <!--==================== BLOG LIST ====================-->
       <section class="blog section">
         <div class="container">
@@ -152,6 +125,21 @@
                     <p class="blog-text">
                       <?= $bl->deskripsi; ?>
                     </p>
+                    <div class="wrapper-flex">
+                      <div class="profile-wrapper">
+                        <img src="<?= base_url('/img/default_admin.png'); ?>" alt="">
+                      </div>
+                      <div class="wrapper">
+                        <a><?= $bl->nama_user; ?></a>
+                        <p class="text-sm">
+                            <?php $waktu = substr($bl->created_at,11,5); ?>
+                            <time><?= date('d M, Y',strtotime($bl->created_at)); ?>, <?= $waktu; ?></time>
+                            <span class="separator"></span>
+                            <i class="bx bx-phone"></i>
+                            <time><?= $waktu; ?></time>
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               <?php } ?>

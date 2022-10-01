@@ -2,8 +2,9 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="<?= base_url('/'); ?>" class="nav__logo">
-          Holux <i class="bx bxs-home-alt-2"></i>
+          Interior Padang
         </a>
+        <img src="<?= base_url('/interior_padang.jpg'); ?>" alt="">
 
         <div class="nav__menu">
           <ul class="nav__list">
@@ -129,11 +130,20 @@
       </section>
 
       <!--==================== POPULAR ====================-->
-      <section class="popular section" id="popular">
+      <section class="blog section" id="blog">
         <div class="container">
-          <span class="section__subtitle">Post</span>
-          <h2 class="section__title">Recent Post <span>.</span></h2>
-
+          <div class="blog_header">
+            <div class="left_title">
+                <span class="section__subtitle">Post</span>
+                <h2 class="section__title">Recent Post <span>.</span></h2>
+            </div>
+            <div class="right_title">
+                <h2>See More</h2>
+            </div>
+          </div>
+            
+            
+          </div>
           
           <div class="popular__container swiper">
             <div class="swiper-wrapper">
