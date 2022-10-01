@@ -15,10 +15,12 @@ class Fblog extends BaseController
 
     public function index()
     {
+
         $data = [  
             'title' => 'Interior Padang',
             'isi' => 'frontend/v_home_fe',
             'blog_list' =>$this->BlogModel->getSomeBlog(),
+            'segment' => $this->uri->getSegment(1)
         ];
         echo view('layout/v_fe_wrapper', $data);
 
@@ -30,6 +32,7 @@ class Fblog extends BaseController
             'title' => 'Interior Padang | Blog',
             'isi' => 'frontend/v_blog_list_fe',
             'blog_list' =>$this->BlogModel->getBlog(),
+            'segment' => $this->uri->getSegment(1)
         ];
         echo view('layout/v_fe_wrapper', $data);
     }

@@ -89,6 +89,7 @@ class Blog extends BaseController
         $this->BlogModel->save([
             'sampul' => $namaSampul,
             'judul' => $this->request->getVar('judul'),
+            'kategori' => 'kategori',
             'deskripsi' => $this->request->getVar('deskripsi'),
             'isi' => $this->request->getVar('isi'),  
             'is_active' => 1,

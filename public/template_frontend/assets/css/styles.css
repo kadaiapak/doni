@@ -246,6 +246,11 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+.blog_header {
+  display: flex;
+  justify-content: space-between;
+}
+
 @media screen and (max-width: 1023px) {
   .nav__menu {
     position: fixed;
@@ -446,6 +451,32 @@ body.dark-theme {
 
 .logos__img img:hover {
   opacity: 0.6;
+}
+
+/*=================== BLOG ========== */
+.blog__container {
+  padding: 1rem 0 5rem;
+}
+
+.blog__card {
+  background-color: var(--container-color);
+  padding: 0.5rem 0.5rem 1.5rem;
+  border-radius: 1rem;
+  transition: 0.4s;
+  display: flex;
+}
+
+.blog__data {
+  padding-left: 10px;
+}
+
+.blog__price {
+  font-size: 14px;
+}
+
+.blog__img {
+  width: 300px;
+  border-radius: 1rem;
 }
 
 /*=============== POPULAR ===============*/

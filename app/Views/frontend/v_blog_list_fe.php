@@ -4,34 +4,19 @@
         <a href="<?= base_url('/'); ?>" class="nav__logo">
           Holux <i class="bx bxs-home-alt-2"></i>
         </a>
-
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
+              <a href="<?= base_url('/'); ?>" class="nav__link">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
             </li>
 
             <li class="nav__item">
-              <a href="#popular" class="nav__link">
-                <i class="bx bx-building-house"></i>
-                <span>Residences</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="<?= base_url(); ?>/blog" class="nav__link">
+              <a href="<?= base_url(); ?>/blog" class="nav__link <?= $segment == 'blog' ? 'active-link' : null ?>">
                 <i class="bx bx-building-house"></i>
                 <span>Blog</span>
-              </a>
-            </li>
-
-            <li class="nav__item">
-              <a href="#value" class="nav__link">
-                <i class="bx bx-award"></i>
-                <span>Value</span>
               </a>
             </li>
 
@@ -50,7 +35,6 @@
         <a href="#" class="button nav__button"> Subscribe </a>
       </nav>
     </header>
-
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
@@ -110,57 +94,33 @@
         </div>
       </section>
       <!--==================== BLOG LIST ====================-->
-      <section class="blog section">
+      <section class="blog section" id="blog">
         <div class="container">
             <h2 class="section__title">Latest Blog <span>.</span></h2>
-            <div class="blog-card-group">
-              <?php foreach ($blog_list as $bl) { ?>
-                <div class="blog-card">
-                  <div class="blog-card-banner">
-                    <img src="<?= base_url(); ?>/img/<?= $bl->sampul; ?>" alt="" width="250" class="blog-banner-img">
-                  </div>
-                  <div class="blog-content-wrapper">
-                    <button class="blog-topic text-tiny">Database</button>
-                    <h3><?= $bl->judul; ?></h3> 
-                    <p class="blog-text">
-                      <?= $bl->deskripsi; ?>
-                    </p>
-                    <div class="wrapper-flex">
-                      <div class="profile-wrapper">
-                        <img src="<?= base_url('/img/default_admin.png'); ?>" alt="">
-                      </div>
-                      <div class="wrapper">
-                        <a><?= $bl->nama_user; ?></a>
-                        <p class="text-sm">
-                            <?php $waktu = substr($bl->created_at,11,5); ?>
-                            <time><?= date('d M, Y',strtotime($bl->created_at)); ?>, <?= $waktu; ?></time>
-                            <span class="separator"></span>
-                            <i class="bx bx-phone"></i>
-                            <time><?= $waktu; ?></time>
+            <div class="blog__container">
+              <div>
+                <?php foreach ($blog_list as $bl) { ?>
+                  <article class="blog__card grid">
+                    <img src="<?= base_url(); ?>/img/<?= $bl->sampul; ?>" alt="" class="blog__img">
+                    <div class="blog__data">
+                        <h2 class="blog__price">
+                          <?php $waktu = substr($bl->created_at,11,5); ?>
+                            <?= $bl->nama_user.' | '.date('d M, Y',strtotime($bl->created_at)); ?>
+                        </h2>
+                        <h3 class="blog__title">
+                          <?= $bl->judul; ?>
+                        </h3>
+                        <p class="blog__description">
+                          <?= $bl->deskripsi; ?>
                         </p>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              <?php } ?>
-             
-          </div>
+                  </article>
+                <?php } ?> 
+              </div>
+            </div>
         </div>
        
       </section>
 
-
-      <!--==================== SUBSCRIBE ====================-->
-      <section class="subscribe section">
-        <div class="subscribe__container container">
-          <h1 class="subscribe__title">Get Started with Holux</h1>
-          <p class="subscribe__description">
-            Subscribe and find super attractive price quotes from us, Find your
-            residence soon
-          </p>
-          <a href="#" class="button subscribe__button"> Get Started </a>
-        </div>
-      </section>
-    </main>
 
     
