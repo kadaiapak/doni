@@ -28,12 +28,16 @@ class Fblog extends BaseController
 
      public function blog_list()
     {
-        $data = [  
-            'title' => 'Interior Padang | Blog',
-            'isi' => 'frontend/v_blog_list_fe',
-            'blog_list' =>$this->BlogModel->getBlog(),
-            'segment' => $this->uri->getSegment(1)
-        ];
+        // $data = [  
+        //     'title' => 'Interior Padang | Blog',
+        //     'isi' => 'frontend/v_blog_list_fe',
+        //     'blog_list' =>$this->BlogModel->paginate(2),
+        //     'pager' => $this->BlogModel->pager,
+        //     'segment' => $this->uri->getSegment(1)
+        // ];
+        $data = $this->BlogModel->getPagination(3);
+        $data['segment'] = $this->uri->getSegment(1);
+
         echo view('layout/v_fe_wrapper', $data);
     }
 

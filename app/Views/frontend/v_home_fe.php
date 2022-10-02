@@ -4,7 +4,7 @@
         <a href="<?= base_url('/'); ?>" class="nav__logo">
           Interior Padang
         </a>
-        <img src="<?= base_url('/interior_padang.jpg'); ?>" alt="">
+        <!-- <img src="< ?= base_url('/interior_padang.jpg'); ?>" alt=""> -->
 
         <div class="nav__menu">
           <ul class="nav__list">
@@ -134,7 +134,7 @@
       <!--==================== BLOG POST ====================-->
       <section class="blog section" id="blog">
         <div class="container">
-          <div class="blog_header">
+          <div class="blog__header">
             <div class="left_title">
                 <span class="section__subtitle">Our Story</span>
                 <h2 class="section__title">Recent Post<span>.</span></h2>
@@ -182,7 +182,7 @@
               <?php } ?>
             </div>
 
-              <div class="swiper-button-next">
+            <div class="swiper-button-next">
               <i class="bx bx-chevron-right"></i>
             </div>
             <div class="swiper-button-prev">

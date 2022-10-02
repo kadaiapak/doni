@@ -3,13 +3,13 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="<?= base_url('/'); ?>" class="nav__logo">
-          Holux <i class="bx bxs-home-alt-2"></i>
+          Interior Padang <i class="bx bxs-home-alt-2"></i>
         </a>
 
         <div class="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">
+              <a href="#home" class="nav__link">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Home</span>
               </a>
@@ -45,13 +45,13 @@
         <div class="home__container container grid">
           <div class="home__data">
             <h1 class="home__title">
-              Discover <br />
-              Most Suitable <br />
-              Property
+              Atur <br />
+              Keyanaman mu <br />
+              Sendiri
             </h1>
             <p class="home__description">
-              Find a variety of propertoes that suit you very easily, forget all
-              difficulties in finding a residence for you
+              Buat properti sesuai keiginanmu, atur sesukamu. Lupakan semua kesulitannya 
+              karna kami akan desain sendiri untukmu
             </p>
             <form action="" class="home__search">
               <i class="bx bxs-map"></i>

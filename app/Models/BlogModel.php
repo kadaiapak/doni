@@ -33,6 +33,18 @@ class BlogModel extends Model
         $query =  $this->db->query('SELECT * FROM blog LIMIT 5;');
         return $query->getResult();
     }
+
+    function getPagination($num, $keyword = null)
+    {
+        $builder = $this->builder();
+        $builder->join('user', 'user.id = blog.user_id');
+        return [
+            'title' => 'Interior Padang | Blog',
+            'isi' => 'frontend/v_blog_list_fe',
+            'blog_list' =>$this->paginate($num),
+            'pager' => $this->pager
+        ];
+    }
 }
 
 ?>

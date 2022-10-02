@@ -2,7 +2,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="<?= base_url('/'); ?>" class="nav__logo">
-          Holux <i class="bx bxs-home-alt-2"></i>
+          Interior Padang <i class="bx bxs-home-alt-2"></i>
         </a>
         <div class="nav__menu">
           <ul class="nav__list">
@@ -42,13 +42,13 @@
         <div class="home__container container grid">
           <div class="home__data">
             <h1 class="home__title">
-              Discover <br />
-              Most Suitable <br />
-              Property
+              Atur<br />
+              Keyanaman mu<br />
+              Sendiri
             </h1>
             <p class="home__description">
-              Find a variety of propertoes that suit you very easily, forget all
-              difficulties in finding a residence for you
+              Buat properti sesuai keiginanmu, atur sesukamu. Lupakan semua kesulitannya 
+              karna kami akan desain sendiri untukmu
             </p>
             <form action="" class="home__search">
               <i class="bx bxs-map"></i>
@@ -99,26 +99,31 @@
            <span class="section__subtitle">Our Story</span>
             <h2 class="section__title">Latest Blog<span>.</span></h2>
             <div class="blog__container">
-              <div>
                 <?php foreach ($blog_list as $bl) { ?>
                   <article class="blog__card">
-                    <img src="<?= base_url(); ?>/img/<?= $bl->sampul; ?>" alt="" class="blog__img">
+                    <div class="blog__images">
+                      <img src="<?= base_url(); ?>/img/<?= $bl['sampul']; ?>" alt="" class="blog__img">
+
+                    </div>
                     <div class="blog__data">
                         <h2 class="blog__price">
-                          <?php $waktu = substr($bl->created_at,11,5); ?>
-                            <?= $bl->nama_user.' | '.date('d M, Y',strtotime($bl->created_at)); ?>
+                          <?php $waktu = substr($bl['created_at'],11,5); ?>
+                            <?= $bl['nama_user'].' | '.date('d M, Y',strtotime($bl['created_at'])); ?>
                         </h2>
                         <h3 class="blog__title">
-                          <?= $bl->judul; ?>
+                          <?= $bl['judul']; ?>
                         </h3>
                         <p class="blog__description">
-                          <?= substr($bl->deskripsi, 0, 100).'..' ?>
+                          <?= substr($bl['deskripsi'], 0, 100).'..' ?>
                         </p>
+                        <a href="<?= base_url(); ?>/blog/<?= $bl['id']; ?>" class="button blog__card-button">Read More..</a>
                     </div>
                   </article>
                 <?php } ?> 
-              </div>
             </div>
+            
+            <?= $pager->links('default', 'pagination') ?>
+            
         </div>
        
       </section>

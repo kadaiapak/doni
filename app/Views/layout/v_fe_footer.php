@@ -3,11 +3,11 @@
       <div class="footer__container container grid">
         <div>
           <a href="#" class="footer__logo">
-            Holux<i class="bx bxs-home-alt-2"></i>
+            Interior Padang<i class="bx bxs-home-alt-2"></i>
           </a>
           <p class="footer__description">
-            Our vision is to make all people <br />
-            the best place to live for them.
+            Visi kami memberikan kenyamanan <br />
+            dan keindahan.
           </p>
         </div>
 
