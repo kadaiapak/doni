@@ -32,7 +32,7 @@
             <li class="nav__item">
               <a href="#popular" class="nav__link">
                 <i class="bx bx-building-house"></i>
-                <span>Residences</span>
+                <span>Our Project</span>
               </a>
             </li>
 
@@ -61,13 +61,13 @@
         <div class="home__container container grid">
           <div class="home__data">
             <h1 class="home__title">
-              Discover <br />
-              Most Suitable <br />
-              Property
+              Atur <br />
+              Keyanaman mu <br />
+              Sendiri
             </h1>
             <p class="home__description">
-              Find a variety of propertoes that suit you very easily, forget all
-              difficulties in finding a residence for you
+              Buat properti sesuai keiginanmu, atur sesukamu. Lupakan semua kesulitannya 
+              karna kami akan desain sendiri untukmu
             </p>
             <form action="" class="home__search">
               <i class="bx bxs-map"></i>
@@ -136,8 +136,8 @@
         <div class="container">
           <div class="blog_header">
             <div class="left_title">
-                <span class="section__subtitle">Post</span>
-                <h2 class="section__title">Recent Post <span>.</span></h2>
+                <span class="section__subtitle">Our Story</span>
+                <h2 class="section__title">Recent Post<span>.</span></h2>
             </div>
             <div class="right_title">
                 <a href="<?= base_url('/blog'); ?>" class="button">See More</a>
@@ -157,7 +157,7 @@
                             <div class="popular__data">
                             <h3 class="popular__title"><?= $blog->judul; ?></h3>
                             <p class="popular__description">
-                                <?= $blog->deskripsi; ?>
+                                <?= substr($blog->deskripsi,0,100).'...'; ?>
                             </p>
                             </div>
                         </article>

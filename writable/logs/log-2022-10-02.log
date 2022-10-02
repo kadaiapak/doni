@@ -1,0 +1,18 @@
+CRITICAL - 2022-10-02 02:14:55 --> syntax error, unexpected token ";"
+in APPPATH\Views\frontend\v_blog_list_fe.php on line 115.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('frontend/v_blog_list_fe', [], true)
+ 3 APPPATH\Views\layout\v_fe_content.php(3): view('frontend/v_blog_list_fe')
+ 4 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_fe_content.php')
+ 5 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('layout/v_fe_content.php', [], true)
+ 7 APPPATH\Views\layout\v_fe_wrapper.php(3): view('layout/v_fe_content.php')
+ 8 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\v_fe_wrapper.php')
+ 9 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+10 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('layout/v_fe_wrapper', [], true)
+11 APPPATH\Controllers\Frontend\Fblog.php(37): view('layout/v_fe_wrapper', [...])
+12 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Frontend\Fblog->blog_list()
+13 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Frontend\Fblog))
+14 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

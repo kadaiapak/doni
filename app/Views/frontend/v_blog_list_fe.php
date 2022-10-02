@@ -95,12 +95,13 @@
       </section>
       <!--==================== BLOG LIST ====================-->
       <section class="blog section" id="blog">
-        <div class="container">
-            <h2 class="section__title">Latest Blog <span>.</span></h2>
+        <div class="container blog__container">
+           <span class="section__subtitle">Our Story</span>
+            <h2 class="section__title">Latest Blog<span>.</span></h2>
             <div class="blog__container">
               <div>
                 <?php foreach ($blog_list as $bl) { ?>
-                  <article class="blog__card grid">
+                  <article class="blog__card">
                     <img src="<?= base_url(); ?>/img/<?= $bl->sampul; ?>" alt="" class="blog__img">
                     <div class="blog__data">
                         <h2 class="blog__price">
@@ -111,7 +112,7 @@
                           <?= $bl->judul; ?>
                         </h3>
                         <p class="blog__description">
-                          <?= $bl->deskripsi; ?>
+                          <?= substr($bl->deskripsi, 0, 100).'..' ?>
                         </p>
                     </div>
                   </article>
