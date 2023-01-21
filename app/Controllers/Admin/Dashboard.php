@@ -7,7 +7,7 @@ use App\Models\BlogModel;
 class Dashboard extends BaseController
 {
     public function index()
-    {
+    { 
         $data = [  
             'title' => 'Dashboard',
             'isi' =>  'dashboard/v_dashboard'
