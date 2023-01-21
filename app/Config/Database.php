@@ -35,7 +35,7 @@ class Database extends Config
         'hostname' => 'localhost',
         'username' => 'root',
         'password' => '',
-        'database' => 'interiorpadang-ci4',
+        'database' => 'bapomisumbar',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
